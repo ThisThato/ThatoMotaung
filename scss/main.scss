@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -22,7 +23,7 @@ h3 {
 
   &.lg-heading {
     font-size: 4.5rem;
-    letter-spacing: 1rem;
+    letter-spacing: 0rem;
   }
 
   &.sm-heading {

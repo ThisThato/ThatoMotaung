@@ -93,8 +93,10 @@
   }
 
   .nav-item {
-    transform: translate3d(-75px, 0, 0);
-    letter-spacing: 0.2rem;
+    transform: translate3d(-70px, 0, 0);
+    letter-spacing: 0.3rem;
+    text-align: center;
+    align-items: center;
     @include easeout;
 
     &.show {
@@ -127,6 +129,6 @@
 //Delay each nav item slide by 0.2s
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.1s;
+    transition-delay: $x * 0.01s;
   }
 }
