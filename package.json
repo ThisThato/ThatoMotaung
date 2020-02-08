@@ -1,0 +1,21 @@
+{
+  "name": "modernwebsite--traversy",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Thato",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "PortfolioWebsite"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
