@@ -73,7 +73,7 @@
   }
 
   &-branding {
-    background: $primary-color;
+    background: set-text-color($primary-color);
     transform: translate3d(0, 100%, 0);
     @include easeout;
 
@@ -85,7 +85,7 @@
     .portrait {
       width: 250px;
       height: 255px;
-      background: url(/dist/img/thato2.jpg);
+      background: url(../img/thato2.jpg);
       border-radius: 50%;
       border: solid 3px $tertiary-color;
       opacity: none;
