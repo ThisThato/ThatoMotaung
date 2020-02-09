@@ -9,7 +9,7 @@ body {
   @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
-  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  //font-family: "segoe ui", tahoma, geneva, verdana, sans-serif;
   font-family: "PT Sans", sans-serif;
   line-height: 1.5;
 }
@@ -28,13 +28,20 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(lighten($dark-color, 3), 0.2);
+
     letter-spacing: 0.5rem;
+
+    a {
+      &:hover {
+        color: $tertiary-color;
+        @include easeout;
+      }
+    }
   }
 }
 
 a {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -45,7 +52,7 @@ header {
 }
 
 .text-secondary {
-  color: $secondary-color;
+  color: $tertiary-color;
 }
 
 main {
@@ -60,7 +67,7 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: $secondary-color;
+        color: $tertiary-color;
         @include easeout;
       }
     }
@@ -87,7 +94,7 @@ main {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: $secondary-color 3px solid;
+  border: $tertiary-color 3px solid;
 }
 
 .bio {
@@ -109,7 +116,7 @@ main {
 .job {
   background: lighten($primary-color, $amount: 5);
   padding: 0.5rem;
-  border-bottom: $secondary-color 5px solid;
+  border-bottom: $tertiary-color 5px solid;
 }
 
 //Work/Projects
@@ -123,9 +130,21 @@ main {
 
     &:hover {
       opacity: 0.5;
-      border-color: $secondary-color;
+      border-color: $tertiary-color;
       @include easeout;
     }
+  }
+}
+
+//Photography
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px white solid;
   }
 }
 
@@ -146,8 +165,8 @@ main {
     &:hover {
       padding: 0.5rem 1.5rem;
       opacity: 0.5;
-      border-color: $secondary-color;
-      color: set-text-color($secondary-color);
+      border-color: $tertiary-color;
+      color: set-text-color($tertiary-color);
       @include easeout;
     }
   }
@@ -161,8 +180,8 @@ main {
   margin-bottom: 0.3rem;
 
   &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
+    background: $tertiary-color;
+    color: set-text-color($tertiary-color);
     @include easeout;
   }
 }
