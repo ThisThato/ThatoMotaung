@@ -31,8 +31,8 @@
   .menu-branding, .menu-nav {
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     float: left;
     width: 50%;
     height: 100vh;
@@ -40,7 +40,7 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #f2f2f2;
+    background: whitesmoke;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
@@ -53,17 +53,16 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 255px;
-      background: url(../img/thato2.jpg);
+      width: 210px;
+      height: 206px;
+      background: url(/dist/img/Ava.png);
       border-radius: 50%;
-      border: solid 3px #ed5565;
-      opacity: none; }
+      border: solid 3px #eece1a;
+      opacity: none;
+      align-items: center; }
   .menu .nav-item {
     transform: translate3d(-70px, 0, 0);
     letter-spacing: 0.3rem;
-    text-align: center;
-    align-items: center;
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
@@ -76,24 +75,24 @@
   font-size: 30px;
   text-transform: uppercase;
   padding: 1rem 0;
-  font-weight: 300;
+  font-weight: 200;
   color: #000;
   text-decoration: none;
   transition: all 0.5s ease-out; }
   .nav-link:hover {
-    color: #ed5565; }
+    color: #eece1a; }
 
 .nav-item:nth-child(1) {
-  transition-delay: 0.01s; }
-
-.nav-item:nth-child(2) {
-  transition-delay: 0.02s; }
-
-.nav-item:nth-child(3) {
   transition-delay: 0.03s; }
 
+.nav-item:nth-child(2) {
+  transition-delay: 0.06s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.09s; }
+
 .nav-item:nth-child(4) {
-  transition-delay: 0.04s; }
+  transition-delay: 0.12s; }
 
 * {
   box-sizing: border-box; }
@@ -137,7 +136,7 @@ h3 {
     h1.sm-heading a:hover,
     h2.sm-heading a:hover,
     h3.sm-heading a:hover {
-      color: #ed5565;
+      color: #eece1a;
       transition: all 0.5s ease-out; }
     h1.sm-heading .create,
     h2.sm-heading .create,
@@ -153,7 +152,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #ed5565; }
+  color: #eece1a; }
 
 main {
   padding: 4rem;
@@ -164,7 +163,7 @@ main {
       padding: 0.4rem;
       color: #000; }
       main .icons a:hover {
-        color: #ed5565;
+        color: #eece1a;
         transition: all 0.5s ease-out; }
   main#Home {
     overflow: hidden; }
@@ -181,7 +180,7 @@ main {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #ed5565 3px solid; }
+  border: #eece1a 3px solid; }
 
 .bio {
   grid-area: bio;
@@ -199,7 +198,7 @@ main {
 .job {
   background: white;
   padding: 0.5rem;
-  border-bottom: #ed5565 5px solid; }
+  border-bottom: #eece1a 5px solid; }
 
 .projects {
   display: grid;
@@ -210,7 +209,7 @@ main {
     border: 3px white solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #ed5565;
+      border-color: #eece1a;
       transition: all 0.5s ease-out; }
 
 .gallery {
@@ -235,7 +234,7 @@ main {
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       opacity: 0.5;
-      border-color: #ed5565;
+      border-color: #eece1a;
       color: #000;
       transition: all 0.5s ease-out; }
 
@@ -245,7 +244,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #ed5565;
+    background: #eece1a;
     color: #000;
     transition: all 0.5s ease-out; }
 
@@ -263,6 +262,36 @@ main {
   background: #e6e6e6;
   color: #000;
   height: 60px; }
+
+.skills {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+
+.progressbar {
+  width: 500px;
+  position: relative;
+  height: 3em;
+  background-color: #000;
+  border-radius: 2.5em;
+  color: #fff;
+  margin-top: 0.5em; }
+
+.progressbar::before {
+  content: attr(data-label);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  bottom: 0.5em;
+  width: calc(var(--width, 0) * 1%);
+  max-width: calc(100% - 3em);
+  min-width: 2rem;
+  background-color: #eece1a;
+  border-radius: 1em;
+  padding: 1em; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -282,9 +311,10 @@ main {
       letter-spacing: none; }
   ul.menu-nav,
   div.menu-branding {
-    float: none;
+    float: left;
     width: 100%;
-    min-height: 0; }
+    min-height: 0;
+    align-items: center; }
     ul.menu-nav.show,
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -306,6 +336,16 @@ main {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
+  ul.menu-nav,
+  div.menu-branding {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    float: left; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
   .projects {
     grid-template-columns: repeat(1, 1fr); }
   .gallery {

@@ -29,7 +29,6 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($dark-color, 3), 0.2);
-
     letter-spacing: 0.5rem;
 
     a {
@@ -69,7 +68,7 @@ main {
 
     a {
       padding: 0.4rem;
-      color: set-text-color($-color);
+      color: set-text-color($tertiary-color);
 
       &:hover {
         color: $tertiary-color;
@@ -209,6 +208,42 @@ main {
   background: darken($color: $primary-color, $amount: 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+//skills
+
+.skills {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.progressbar {
+  width: 500px;
+  position: relative;
+
+  height: 3em;
+  background-color: $dark-color;
+  border-radius: 2.5em;
+  color: $primary-color;
+  margin-top: 0.5em;
+}
+
+.progressbar::before {
+  content: attr(data-label);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  bottom: 0.5em;
+  width: calc(var(--width, 0) * 1%);
+  max-width: calc(100% - 3em);
+  min-width: 2rem;
+  background-color: $secondary-color;
+  border-radius: 1em;
+  padding: 1em;
 }
 
 @import "mobile";

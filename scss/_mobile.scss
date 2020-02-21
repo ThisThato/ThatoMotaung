@@ -24,10 +24,10 @@
 
   ul.menu-nav,
   div.menu-branding {
-    float: none;
+    float: left;
     width: 100%;
     min-height: 0;
-
+    align-items: center;
     &.show {
       transform: translate3d(0, 0, 0);
     }
@@ -73,6 +73,19 @@
 @include mediaSm {
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   .projects {
