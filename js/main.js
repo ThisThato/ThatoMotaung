@@ -32,3 +32,83 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+//Chart
+
+//chart options
+const options = {
+  chart: {
+    height: 200,
+    width: "30%",
+    type: "bar",
+    background: "transparent",
+    forcolor: "#333"
+  },
+  series: [
+    {
+      // name: "skills",
+      data: [70]
+    }
+  ],
+  xaxis: {
+    categories: ["CSS"]
+  },
+
+  fill: {
+    colors: ["#f44336"]
+  },
+
+  dataLabels: {
+    enabled: false
+  },
+
+  title: {
+    align: "Center",
+    margin: 20,
+    offsetY: 20,
+    style: {
+      fontsize: "25px"
+    }
+  },
+
+  dropShadow: {
+    enabled: false
+  }
+};
+
+//initialize chart
+// const chart = new ApexCharts(document.querySelector("#chart"), options);
+
+// //Render Chart
+// chart.render();
+
+// //Button Event - Orientation
+// document.querySelector("button").addEventListener("click", () =>
+//   chart.updateOptions({
+//     plotOptions: {
+//       bar: {
+//         horizontal: true,
+//         columnWidth: "2%",
+//         barHeight: "5%"
+//       }
+//     }
+//   })
+// );
+
+// const Progressbar = document.getElementsByClassName("progressbar")[0];
+
+// setInterval(() => {
+//   const computedstyle = getComputedStyle(Progressbar);
+//   const width = parseFloat(computedstyle.getPropertyValue("--width")) || 0;
+//   Progressbar.style.setProperty("--width", width + 0.1);
+// }, 5);
+
+for (i = 0; i < 5; i++) {
+  const bar = document.getElementsByClassName("progressbar")[i];
+  const computedstyle = getComputedStyle(bar);
+
+  setInterval(() => {
+    var width = parseInt(computedstyle.getPropertyValue("--width"));
+    bar.style.setProperty("--width", width + 0.1);
+  }, 5);
+}
