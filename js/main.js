@@ -3,8 +3,7 @@ const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
-
-const navItems = document.querySelectorAll("nav-item");
+const navItems = document.querySelectorAll(".nav-item");
 
 //Initial state of menu
 let showMenu = false;
@@ -17,8 +16,7 @@ function toggleMenu() {
     menu.classList.add("show");
     menuNav.classList.add("show");
     menuBranding.classList.add("show");
-
-    navItems.forEach(item => item.classList.add("show"));
+    navItems.forEach((item) => item.classList.add("show"));
 
     showMenu = true;
   } else {
@@ -26,8 +24,7 @@ function toggleMenu() {
     menu.classList.remove("show");
     menuNav.classList.remove("show");
     menuBranding.classList.remove("show");
-
-    navItems.forEach(item => item.classList.remove("show"));
+    navItems.forEach((item) => item.classList.remove("show"));
 
     showMenu = false;
   }
@@ -42,24 +39,24 @@ const options = {
     width: "30%",
     type: "bar",
     background: "transparent",
-    forcolor: "#333"
+    forcolor: "#333",
   },
   series: [
     {
       // name: "skills",
-      data: [70]
-    }
+      data: [70],
+    },
   ],
   xaxis: {
-    categories: ["CSS"]
+    categories: ["CSS"],
   },
 
   fill: {
-    colors: ["#f44336"]
+    colors: ["#f44336"],
   },
 
   dataLabels: {
-    enabled: false
+    enabled: false,
   },
 
   title: {
@@ -67,13 +64,13 @@ const options = {
     margin: 20,
     offsetY: 20,
     style: {
-      fontsize: "25px"
-    }
+      fontsize: "25px",
+    },
   },
 
   dropShadow: {
-    enabled: false
-  }
+    enabled: false,
+  },
 };
 
 //initialize chart
