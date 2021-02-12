@@ -21,31 +21,30 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 4.5rem;
-    letter-spacing: 0rem;
+    font-size: 6rem;
   }
 
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
-    letter-spacing: 0.5rem;
 
-    a {
-      &:hover {
-        color: $tertiary-color;
-        @include easeout;
-      }
-    }
+    // a {
+    //   &:hover {
+    //     color: $secondary-color;
+    //     @include easeout;
+    //   }
+    // }
 
-    .create {
-      color: #333333;
-    }
+    // .create {
+    //   color: #333333;
+    // }
   }
 }
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 header {
@@ -55,7 +54,7 @@ header {
 }
 
 .text-secondary {
-  color: $tertiary-color;
+  color: $secondary-color;
 }
 
 main {
@@ -68,11 +67,10 @@ main {
 
     a {
       padding: 0.4rem;
-      color: set-text-color($tertiary-color);
+      @include easeOut;
 
       &:hover {
-        color: $tertiary-color;
-        @include easeout;
+        color: $secondary-color;
       }
     }
   }
@@ -98,7 +96,7 @@ main {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: $tertiary-color 3px solid;
+  border: $secondary-color 3px solid;
 }
 
 .bio {
@@ -120,7 +118,7 @@ main {
 .job {
   background: lighten($primary-color, $amount: 5);
   padding: 0.5rem;
-  border-bottom: $tertiary-color 5px solid;
+  border-bottom: $secondary-color 5px solid;
 }
 
 //Work/Projects
@@ -134,8 +132,8 @@ main {
 
     &:hover {
       opacity: 0.5;
-      border-color: $tertiary-color;
-      @include easeout;
+      border-color: $secondary-color;
+      @include easeOut;
     }
   }
 }
@@ -148,7 +146,7 @@ main {
 
   img {
     width: 100%;
-    border: 3px white solid;
+    // border: 3px $secondary-color solid;
   }
 }
 
@@ -169,9 +167,9 @@ main {
     &:hover {
       padding: 0.5rem 1.5rem;
       opacity: 0.5;
-      border-color: $tertiary-color;
-      color: set-text-color($tertiary-color);
-      @include easeout;
+      border-color: $secondary-color;
+      color: set-text-color($secondary-color);
+      @include easeOut;
     }
   }
 }
@@ -184,9 +182,9 @@ main {
   margin-bottom: 0.3rem;
 
   &:hover {
-    background: $tertiary-color;
-    color: set-text-color($tertiary-color);
-    @include easeout;
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    @include easeOut;
   }
 }
 
@@ -212,19 +210,18 @@ main {
 
 //skills
 
-.skills {
-  display: grid;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
-}
+// .skills {
+//   display: grid;
+//   justify-content: space-evenly;
+//   align-items: center;
+// }
 
 .progressbar {
-  width: 500px;
+  width: 100%;
   position: relative;
 
   height: 3em;
-  background-color: $dark-color;
+  background-color: $primary-color;
   border-radius: 2.5em;
   color: $primary-color;
   margin-top: 0.5em;

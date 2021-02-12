@@ -1,12 +1,10 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
-$tertiary-color: #eece1a;
-$dark-color: #000;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
 
-@mixin easeout {
+@mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
@@ -32,7 +30,7 @@ $background-opacity: 0.9;
 }
 
 @function set-text-color($color) {
-  @if (lightness($color) < 80) {
+  @if (lightness($color) > 40) {
     @return #000;
   } @else {
     @return #fff;
@@ -53,7 +51,7 @@ $background-opacity: 0.9;
 }
 
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (min-width: 1170px) {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
     @content;
   }
 }
